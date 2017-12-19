@@ -19,7 +19,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<c:set var="id" value="${id }"/>
+<c:set var="id" value="${param }"/>
 <% String id = (String)pageContext.getAttribute("id");
 
 String driverName = "com.postgresql.jdbc.Driver";
