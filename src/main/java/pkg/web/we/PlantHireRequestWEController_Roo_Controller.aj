@@ -28,7 +28,7 @@ privileged aspect PlantHireRequestWEController_Roo_Controller {
         addDateTimeFormatPatterns(uiModel);
         if(PlantHireRequest.findPlantHireRequest(id).getStatus()==PHRStatus.ACCEPTED) {
 //        	uiModel.addAttribute("phrs_id",id);
-        	return "redirect: newpo?id="+id;
+        	return "we/phrs/newpo?id=51";
         }
         uiModel.addAttribute("planthirerequest", PlantHireRequest.findPlantHireRequest(id));
         uiModel.addAttribute("itemId", id);
