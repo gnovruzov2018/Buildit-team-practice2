@@ -20,9 +20,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>${phrs_id }</h1>
-<h2><%=request.getAttribute("phrs_id") %></h2>
-<% String id = "51";
+<% String id = (String)request.getAttribute("phrs_id");
 
 String driverName = "com.postgresql.jdbc.Driver";
 String connectionUrl = "jdbc:postgresql://ec2-23-21-236-249.compute-1.amazonaws.com:5432/";
