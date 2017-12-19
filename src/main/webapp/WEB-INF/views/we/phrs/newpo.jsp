@@ -11,6 +11,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+ <%@ page isELIgnored="false" %>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
@@ -20,7 +21,7 @@
 </head>
 <body>
 <h1>${phrs_id }</h1>
-<h2><%=(String) request.getAttribute("phrs_id") %></h2>
+<h2><%request.getAttribute("phrs_id"); %></h2>
 <% String id = "51";
 
 String driverName = "com.postgresql.jdbc.Driver";
