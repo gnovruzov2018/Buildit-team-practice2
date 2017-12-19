@@ -20,7 +20,7 @@
 </head>
 <body>
 <c:set var="id" value="${phrs_id }"/>
-<% String id = (String)pageContext.getAttribute("id");
+<% String id = (String)request.getAttribute("id");
 
 String driverName = "com.postgresql.jdbc.Driver";
 String connectionUrl = "jdbc:postgresql://ec2-23-21-236-249.compute-1.amazonaws.com:5432/";
