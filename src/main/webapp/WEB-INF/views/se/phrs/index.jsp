@@ -34,7 +34,7 @@
                         <c:if test="${temp.status == 'ACCEPTED'}">
                         <td>Cannot be updated</td>
                         </c:if>
-                        <td><a href="/Buildit/se/phrs/cancel/${temp.id }">Cancel</a></td>
+                        <td><a href="/se/phrs/cancel/${temp.id }">Cancel</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
