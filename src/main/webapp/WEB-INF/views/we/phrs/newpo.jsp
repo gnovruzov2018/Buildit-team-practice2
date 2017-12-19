@@ -19,7 +19,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>${param }</h1>
+<h1>${phrs_id }</h1>
 <% String id = "51";
 
 String driverName = "com.postgresql.jdbc.Driver";
