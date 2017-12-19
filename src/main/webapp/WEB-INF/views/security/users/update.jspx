@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pkg_security_Users" modelAttribute="users" path="/security/users" versionField="Version" z="JC6jTnbAGNzraFtWZlrkFCJ14qo=">
+        <field:textarea field="username" id="c_pkg_security_Users_username" required="true" z="83WMfuakPsL9nm5ZL+LvIMlydq8="/>
+        <field:textarea field="password" id="c_pkg_security_Users_password" required="true" z="4xcg2x3ho2U/wwxwgDYfm0M8RGQ="/>
+        <field:checkbox field="enabled" id="c_pkg_security_Users_enabled" z="SISP0cD2CdhNDK9EF7xiiZGORdU="/>
+    </form:update>
+</div>

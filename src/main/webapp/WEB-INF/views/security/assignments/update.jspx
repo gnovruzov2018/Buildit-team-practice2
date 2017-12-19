@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pkg_security_Assignments" modelAttribute="assignments" path="/security/assignments" versionField="Version" z="WJ2udYvtHaUePU/hYppL7uwIK/U=">
+        <field:select field="userBuildIt" id="c_pkg_security_Assignments_userBuildIt" itemValue="id" items="${userses}" path="/security/users" z="K3HGfn7n9SWfk6VnYQl+p+qlals="/>
+        <field:select field="authority" id="c_pkg_security_Assignments_authority" itemValue="id" items="${authoritieses}" path="/security/authorities" z="QzdufdRasijspR5UvpMNzOcjxNc="/>
+    </form:update>
+</div>

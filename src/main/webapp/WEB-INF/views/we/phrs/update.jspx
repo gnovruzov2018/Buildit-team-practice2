@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pkg_domain_PlantHireRequest" modelAttribute="plantHireRequest" path="/we/phrs" versionField="Version" z="cieRMKAkHjp/m04wGSaQ67M10YI=">
+        <field:input field="plantHRef" id="c_pkg_domain_PlantHireRequest_plantHRef" z="iU1sg6s807v5sUkqK1rvS+ivE3U="/>
+        <field:select field="status" id="c_pkg_domain_PlantHireRequest_status" items="${phrstatuses}" path="phrstatuses" z="6725iG6QJxqsqevSFgCSqsPEskc="/>
+        <field:input field="siteEngineer" id="c_pkg_domain_PlantHireRequest_siteEngineer" z="c5FJJtjqPXTE+Uh8o2uMDvD9tkY="/>
+        <field:input field="worksEngineer" id="c_pkg_domain_PlantHireRequest_worksEngineer" z="aczruB+XMwK6KU+k8LeOQjYZq9E="/>
+        <field:datetime dateTimePattern="${plantHireRequest_startdate_date_format}" field="startDate" id="c_pkg_domain_PlantHireRequest_startDate" z="meP3jAIWCdeMooFalfOkNCEiJqI="/>
+        <field:datetime dateTimePattern="${plantHireRequest_enddate_date_format}" field="endDate" id="c_pkg_domain_PlantHireRequest_endDate" z="ZBHP2BbHf9Xm/Te7s5CuotOzf/0="/>
+    </form:update>
+</div>
