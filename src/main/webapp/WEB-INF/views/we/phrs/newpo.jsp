@@ -21,7 +21,7 @@
 </head>
 <body>
 <h1> ${phrs_id } </h1>
-<% String id = (String)request.getAttribute("phrs_id");
+<% String id = request.getAttribute("phrs_id").toString();
 
 String driverName = "com.postgresql.jdbc.Driver";
 String connectionUrl = "jdbc:postgresql://ec2-23-21-236-249.compute-1.amazonaws.com:5432/";
