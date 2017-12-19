@@ -20,6 +20,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<h1> ${phrs_id } </h1>
 <% String id = (String)request.getAttribute("phrs_id");
 
 String driverName = "com.postgresql.jdbc.Driver";
