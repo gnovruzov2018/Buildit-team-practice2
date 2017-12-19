@@ -24,11 +24,12 @@ import pkg.web.we.PlantHireRequestWEController;
 privileged aspect PlantHireRequestWEController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", produces = "text/html")
-    public String PlantHireRequestWEController.show(@PathVariable("id") Long id, Model uiModel) {
+    public String PlantHireRequestWEController.show(@PathVariable("id") Long id,HttpServletRequest request, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
         if(PlantHireRequest.findPlantHireRequest(id).getStatus()==PHRStatus.ACCEPTED) {
 //        	uiModel.addAttribute("phrs_id",id);
-        	return "we/phrs/newpo?id=51";
+        	request.getSession().setAttribute("phrs_id",id);
+        	return "we/phrs/newpo";
         }
         uiModel.addAttribute("planthirerequest", PlantHireRequest.findPlantHireRequest(id));
         uiModel.addAttribute("itemId", id);
