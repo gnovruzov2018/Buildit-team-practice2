@@ -43,7 +43,7 @@
       	      type: "POST",
       	      contentType : 'application/json; charset=utf-8',
       	      dataType : 'json',
-      	      url: "http://localhost:8080/Rentit-Server/purchaseorders/delete/"+id,
+      	      url: "https://rentit-team-practice2.herokuapp.com/purchaseorders/delete/"+id,
       	    	 // Note it is important
       	      success :function(result) {
       	       console.log("success");

@@ -17,7 +17,7 @@ public class PurchaseOrderController {
 	
 	@RequestMapping
 	public String list(Model uiModel) {
-		final String uri = "http://localhost:8080/Rentit-Server/purchaseorders/json";
+		final String uri = "https://rentit-team-practice2.herokuapp.com/purchaseorders/json";
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri, String.class);
 		List<PurchaseOrder> purchaseorders =   (List<PurchaseOrder>) new JSONDeserializer().deserialize(result);

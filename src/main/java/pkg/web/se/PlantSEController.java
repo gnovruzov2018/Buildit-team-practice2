@@ -51,7 +51,7 @@ public class PlantSEController {
 
 	@RequestMapping
 	public String list(Model uiModel) {
-		final String uri = "http://localhost:8080/Rentit-Server/plants/json";
+		final String uri = "https://rentit-team-practice2.herokuapp.com/plants/json";
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri, String.class);
 		List<Plant> plants =   (List<Plant>) new JSONDeserializer().deserialize(result);

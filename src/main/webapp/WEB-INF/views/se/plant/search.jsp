@@ -33,7 +33,7 @@
 												.ajax({
 
 													type : "GET",
-													url : "http://localhost:8080/Rentit-Server/plants/json/"+plantid,
+													url : "https://rentit-team-practice2.herokuapp.com/plants/json/"+plantid,
 													success : function(
 															result) {
 														console
