@@ -26,7 +26,7 @@
                 </c:forEach>
             </tbody>
         </table>
-        <a href="/Buildit/se/plant/search">Search plant by id</a><br>
-        <a href="/Buildit/se/plant/checkplant">Check plant availability</a>
+        <a href="/se/plant/search">Search plant by id</a><br>
+        <a href="/se/plant/checkplant">Check plant availability</a>
 </body>
 </html>

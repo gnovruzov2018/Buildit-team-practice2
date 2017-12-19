@@ -14,7 +14,7 @@
 <body>
 	<h3>Plant availability</h3>
 	<br>
-	<form method="get" action="/Buildit/se/plant/checkp">
+	<form method="get" action="/se/plant/checkp">
 		Plant id: <input type="number" name="plant_id" /><br>
 		<br> Start date: <input type="date" name="sdate" /><br>
 		<br> End date: <input type="date" name="edate" /><br>
