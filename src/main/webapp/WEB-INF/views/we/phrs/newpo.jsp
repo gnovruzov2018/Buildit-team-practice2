@@ -22,10 +22,10 @@
 <% String id = request.getParameter("param");
 
 String driverName = "com.postgresql.jdbc.Driver";
-String connectionUrl = "jdbc:postgresql://localhost:5432/";
-String dbName = "buildit";
-String userId = "postgres";
-String password = "root";
+String connectionUrl = "jdbc:postgresql://ec2-23-21-236-249.compute-1.amazonaws.com:5432/";
+String dbName = "d2id56oskru8dr";
+String userId = "vciefrjflruhsm";
+String password = "f42249fd6b886266136032177e3e0b85368057117b7b48a7cf29a6420a311d9b";
 String driverName1 = "com.postgresql.jdbc.Driver";
 String connectionUrl1 = "jdbc:postgresql://ec2-54-83-3-101.compute-1.amazonaws.com:5432/";
 String dbName1 = "dfdiqvqj0n7jlc";
@@ -105,7 +105,7 @@ var purchaseorder = {
 	      type: "POST",
 	      contentType : 'application/json; charset=utf-8',
 	      dataType : 'json',
-	      url: "http://localhost:8080/Rentit-Server/purchaseorders/postpo",
+	      url: "https://rentit-team-practice2.herokuapp.com/purchaseorders/postpo",
 	      data: JSON.stringify(purchaseorder), // Note it is important
 	      success :function(result) {
 	       console.log("success");
