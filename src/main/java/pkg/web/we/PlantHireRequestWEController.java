@@ -10,8 +10,4 @@ import pkg.domain.PlantHireRequest;
 @RooWebScaffold(path = "we/phrs", formBackingObject = PlantHireRequest.class, create = false, delete = false)
 public class PlantHireRequestWEController {
 
-	@RequestMapping(value = "/newpo", produces = "text/html")
-	public String createpo() {
-		return "we/phrs/newpo";
-	}
 }
