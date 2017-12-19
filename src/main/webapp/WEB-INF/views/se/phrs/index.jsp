@@ -29,7 +29,7 @@
                         <td>${temp.startDate}</td>
                         <td>${temp.endDate}</td>
                         <c:if test="${temp.status == 'PENDING_CONFIRMATION'}">
-                        <td><a href="/Buildit/se/phrs/${temp.id }?form">Update</a></td>
+                        <td><a href="/se/phrs/${temp.id }?form">Update</a></td>
                         </c:if>
                         <c:if test="${temp.status == 'ACCEPTED'}">
                         <td>Cannot be updated</td>

@@ -4,7 +4,7 @@
     <definition extends="default" name="we/phrs/list">
         <put-attribute name="body" value="/WEB-INF/views/we/phrs/list.jspx"/>
     </definition>
-    <definition extends="default" name="we/phrs/newpo?param=">
+    <definition extends="default" name="we/phrs/newpo">
         <put-attribute name="body" value="/WEB-INF/views/we/phrs/newpo.jsp"/>
     </definition>
 <definition extends="default" name="we/phrs/show">
