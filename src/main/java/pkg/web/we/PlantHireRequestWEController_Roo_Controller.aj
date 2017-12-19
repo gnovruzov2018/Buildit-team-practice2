@@ -28,8 +28,8 @@ privileged aspect PlantHireRequestWEController_Roo_Controller {
     public String PlantHireRequestWEController.show(@PathVariable("id") Long id,HttpSession session, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
         if(PlantHireRequest.findPlantHireRequest(id).getStatus()==PHRStatus.ACCEPTED) {
-//        	uiModel.addAttribute("phrs_id",id);
-        	session.setAttribute("phrs_id",id);
+        	uiModel.addAttribute("phrs_id",id);
+//        	session.setAttribute("phrs_id",id);
         	return "we/phrs/newpo";
         }
         uiModel.addAttribute("planthirerequest", PlantHireRequest.findPlantHireRequest(id));
