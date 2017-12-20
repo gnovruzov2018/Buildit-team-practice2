@@ -44,7 +44,7 @@ try{
 connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 statement=connection.createStatement();
 String sql ="SELECT count(*) as ponum from purchaseorder";
-String sql1 ="SELECT count(*) as ponum from purchaseorder where plant_id ="+id+"and '"+sdate+"' <= enddate and startdate <= '"+edate+"')";
+String sql1 ="SELECT count(*) as ponum from purchaseorder where plant_id ="+id+"and '"+sdate+"' <= enddate and startdate <= '"+edate+"'";
 
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
