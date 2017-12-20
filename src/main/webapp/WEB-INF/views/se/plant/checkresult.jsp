@@ -16,6 +16,11 @@
 <%String id = request.getAttribute("plant_id").toString();
 String sdate = request.getAttribute("sdate").toString();
 String edate = request.getAttribute("edate").toString();
+%>
+<h2><%=id %></h2>
+<h2><%=sdate %></h2>
+<h2><%=edate %></h2>
+<%
 
 String driverName = "com.postgresql.jdbc.Driver";
 String connectionUrl = "jdbc:postgresql://ec2-54-83-3-101.compute-1.amazonaws.com:5432/";
