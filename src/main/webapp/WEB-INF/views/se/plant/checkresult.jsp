@@ -64,16 +64,21 @@ e.printStackTrace();
 %>
 
 </body>
+<input id="result1" type="hidden" value="<%=result1%>" />
+<script>
+	var result = $('#result1').val();
+	if(result==0){
+		alert("available");
+	}else{
+		alert("selected");
+	}
+</script>
 <%=result1 %>
-<%
-if(result1=="0"){
-	%>
+<div id="lblmsg">
+	
+</div>
 	<h1>Dear user, plant is available in selected time range</h1>
-	<%
-}else{
-	%>
+
 	<h1>Dear user, plant is reserved in selected time range</h1>
-	<%
-}
-	%>
+
 </html>
