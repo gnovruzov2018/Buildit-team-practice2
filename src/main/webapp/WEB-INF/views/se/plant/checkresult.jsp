@@ -44,7 +44,7 @@ try{
 connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 statement=connection.createStatement();
 String sql ="SELECT count(*) as ponum from purchaseorder";
-String sql1 ="SELECT count(*) as ponum from purchaseorder where plant_id ="+id+"and ('"+edate+"' <= startdate or '"+sdate+"' >= enddate)";
+String sql1 ="SELECT count(*) as ponum from purchaseorder where plant_id ="+id+"and '"+sdate+"' <= enddate and startdate <= '"+edate+"')";
 
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
@@ -66,7 +66,7 @@ e.printStackTrace();
 </body>
 <%=result1 %><%=result %>
 <%
-if(result1==result){
+if(result1=="0"){
 	%>
 	<h1>Dear user, plant is available in selected time range</h1>
 	<%
