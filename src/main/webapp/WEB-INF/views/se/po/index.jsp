@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,30 +14,38 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>All Purchase Orders</h1>
-<table class="table table-striped">
-            <thead>
-                <tr class="tr tr-success">
-                	<td>ID</td>
-                    <td>Ordered Plant</td>
-                    <td>Total</td>
-                    <td>Status</td>
-                    <td>Action</td>
-                </tr>   
-            </thead>
-            <tbody>
-                <c:forEach items="${purchaseorders}" var="temp">
-                    <tr>
-                    	<td>${temp.id }</td>
-                        <td>${temp.plant.name}</td>
-                        <td>${temp.total}</td>
-                        <td>${temp.status}</td>
-                        <td><button type="button" onclick="cancelOrder(${temp.id})">Cancel Order</button></td>
-                    </tr>
-                </c:forEach>
-            </tbody>
-        </table>
-        <script>
+	<h1>All Purchase Orders</h1>
+	<table class="table table-striped">
+		<thead>
+			<tr class="tr tr-success">
+				<td>ID</td>
+				<td>Ordered Plant</td>
+				<td>Total</td>
+				<td>Status</td>
+				<td>Action</td>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${purchaseorders}" var="temp">
+				<tr>
+					<td>${temp.id }</td>
+					<td>${temp.plant.name}</td>
+					<td>${temp.total}</td>
+					<td>${temp.status}</td>
+					<c:choose>
+						<c:when test="${temp.status == 'CREATED'}">
+							<td><button type="button" onclick="cancelOrder(${temp.id})">Cancel
+									Order</button></td>
+						</c:when>
+						<c:otherwise>
+							<td>No action</td>
+						</c:otherwise>
+					</c:choose>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	<script>
         function cancelOrder(id){
         	console.log(id);
         	$.ajax({
