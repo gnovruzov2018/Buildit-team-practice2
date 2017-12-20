@@ -39,12 +39,10 @@
         </table>
         <script>
         function cancelOrder(id){
-        	alert(id);
+        	console.log(id);
         	$.ajax({
       	      type: "POST",
-      	      contentType : 'application/json; charset=utf-8',
-      	      dataType : 'json',
-      	      url: "https://rentit-team-practice2.herokuapp.com/purchaseorders/delete1/"+id,
+      	      url: "https://rentit-team-practice2.herokuapp.com/purchaseorders/delete/"+id,
       	    	 // Note it is important
       	      success :function(result) {
       	       console.log("success");
