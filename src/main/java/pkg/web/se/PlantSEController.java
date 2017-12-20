@@ -36,11 +36,14 @@ public class PlantSEController {
 		return "se/plant/search";
 	}
 	@RequestMapping(value = "/checkp", produces = "text/html")
-	public String checkp(HttpServletRequest request) {
+	public String checkp(HttpServletRequest request,Model uiModel) {
 		String id = request.getParameter("plant_id");
 		String sdate = request.getParameter("sdate");
 		String edate = request.getParameter("edate");
 		System.out.println(id);
+		uiModel.addAttribute("plant_id", id);
+		uiModel.addAttribute("sdate", sdate);
+		uiModel.addAttribute("edate", edate);
 		return "se/plant/checkresult";
 	}
 	@RequestMapping(value = "/checkplant", produces = "text/html")

@@ -10,11 +10,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<%@ page isELIgnored="false" %>
 </head>
 <body>
-<%String id = request.getParameter("plant_id");
-String sdate = request.getParameter("sdate");
-String edate = request.getParameter("edate");
+<%String id = request.getAttribute("plant_id").toString();
+String sdate = request.getAttribute("sdate").toString();
+String edate = request.getAttribute("edate").toString();
 
 String driverName = "com.postgresql.jdbc.Driver";
 String connectionUrl = "jdbc:postgresql://ec2-54-83-3-101.compute-1.amazonaws.com:5432/";
