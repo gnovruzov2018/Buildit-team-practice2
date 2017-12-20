@@ -64,6 +64,7 @@ e.printStackTrace();
 %>
 
 </body>
+<%=result1 %><%=result %>
 <%
 if(result1==result){
 	%>
