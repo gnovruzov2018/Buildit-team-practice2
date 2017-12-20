@@ -42,23 +42,14 @@ e.printStackTrace();
 
 Connection connection = null;
 Statement statement = null;
-ResultSet resultSet = null;
 ResultSet resultSet1 = null;
 
-String result = "";
 String result1 = "";
 try{ 
 connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
 statement=connection.createStatement();
-String sql ="SELECT count(*) as ponum from purchaseorder";
 String sql1 ="SELECT count(*) as ponum from purchaseorder where plant_id ="+id+"and '"+sdate+"' <= enddate and startdate <= '"+edate+"'";
 
-resultSet = statement.executeQuery(sql);
-while(resultSet.next()){
-
- result = resultSet.getString("ponum"); 
- 
-}
 resultSet1 = statement.executeQuery(sql1);
 while(resultSet1.next()){
 
@@ -74,18 +65,15 @@ e.printStackTrace();
 <input id="result1" type="hidden" value="<%=result1%>" />
 <script>
 	var result = $('#result1').val();
+	var tr = "";
 	if(result==0){
-		alert("available");
+		tr = "<h1>Dear user, plant is available in selected time range</h1>"
 	}else{
-		alert("selected");
+		tr = "<h1>Dear user, plant is reserved in selected time range</h1>"
 	}
+	$('#lblmsg').append(tr);
 </script>
-<%=result1 %>
 <div id="lblmsg">
 	
 </div>
-	<h1>Dear user, plant is available in selected time range</h1>
-
-	<h1>Dear user, plant is reserved in selected time range</h1>
-
 </html>
