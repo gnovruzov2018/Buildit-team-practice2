@@ -39,6 +39,7 @@
         </table>
         <script>
         function cancelOrder(id){
+        	alert(id);
         	$.ajax({
       	      type: "POST",
       	      contentType : 'application/json; charset=utf-8',
